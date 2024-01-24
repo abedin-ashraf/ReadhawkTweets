@@ -20,19 +20,19 @@ function Post({
     return (
         <div className='post'>
             <div className='post__avatar'>
-                <Avatar src='' />
+                <Avatar src={avatar} />
             </div>
             <div className='post__body'>
                 <div className='post__header'>
                     <div className='post__headerText'>
-                        <h3>Abedin Ashraf {" "}
-                            <span className='post__headerSpecial'><VerifiedIcon className='post__badge' /> @mashraf1s</span></h3>
+                        <h3> {displayName} {" "}
+                            <span className='post__headerSpecial'>{verified && <VerifiedIcon className='post__badge' />} @{username}</span></h3>
                     </div>
                     <div className='post__headerDescription'>
-                        <p>I challenge you to build a Twitter clone with React</p>
+                        <p>{text}</p>
                     </div>
                 </div>
-                <img src="https://media3.giphy.com/media/65ATdpi3clAdjomZ39/giphy.gif" alt=''></img>
+                <img src={image} alt=''></img>
                 <div className='post__footer'>
                     <ChatBubbleOutlineIcon fontSize='small' />
                     <RepeatIcon fontSize='small' />
